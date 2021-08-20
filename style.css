@@ -1,7 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700&display=swap');
+
+    :root {
+        font-family: 'Noto Sans TC', sans-serif;
+    }
+
 label {
     display: block;
 }
 
+.container {
+    margin: auto;
+    text-align: center;
+    width: 60%;
+}
 #check-button {
-    display: block
+    display: block;
+    margin: 1rem auto;
+    padding: 0.5rem 1rem;
+}
+
+#next-button {
+    margin: 1rem auto;
+    display: block;
+    padding: 0.5rem 1rem;
+}
+
+#main-heading {
+margin: 1rem auto;
+text-align: center;
+
 }

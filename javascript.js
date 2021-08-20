@@ -3,12 +3,19 @@ const cashGiven = document.querySelector("#cash-given")
 const checkButton = document.querySelector("#check-button")
 const errorMessage = document.querySelector(".error-message")
 const NoOfNotes = document.querySelectorAll(".notes-given")
+const nextButton = document.querySelector("#next-button")
 
 const availableNotes = [2000,500,100,20,10,5,1];
 
-checkButton.addEventListener("click" , onClickHandler)
+nextButton.addEventListener("click" , nextButtonClickHandler)
+checkButton.addEventListener("click" , checkButtonClickHandler)
 
-function onClickHandler(){
+function nextButtonClickHandler() {
+
+}
+
+
+function checkButtonClickHandler(){
     hideMessage();
      if ( billAmount.value > 0){
            if ( billAmount.value < cashGiven.value) {
