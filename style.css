@@ -1,0 +1,37 @@
+#bill-amount {
+
+    display: block;
+    margin: 1rem auto;
+
+}
+
+label {
+    display: block;
+    margin: 1rem auto;
+}
+
+#cash-given {
+    display: block;
+    margin: 1rem auto;
+}
+
+#check-btn {
+    display: block;
+    margin: 1rem auto;
+}
+
+#next-btn {
+    display: block;
+    margin: 1rem auto;
+}
+
+body {
+    align-content: center;
+text-align:center;
+}
+
+table {
+    margin: 1rem auto;
+    
+}
+
