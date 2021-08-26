@@ -1,37 +1,77 @@
-#bill-amount {
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
-    display: block;
-    margin: 1rem auto;
 
+
+:root {
+    font-family: 'Open Sans', sans-serif;
+    --primary-color: #2D936C;
+    --para-color: white;
+--background-color: #391463;
 }
 
+#section {
+    background-color: var(--background-color);
+    margin:0rem auto;
+    max-width: 450px;
+    padding: 1rem;
+    
+}
+
+
+
+label {
+color: var(--para-color);
+}
+
+input {
+    display: block;
+    margin: 1rem auto;
+padding: 0.5rem;
+width: 80%;
+}
+
+#main-heading {
+    color: var(--para-color);
+}
+
+#para {
+color: var(--para-color);
+}
 label {
     display: block;
     margin: 1rem auto;
 }
 
-#cash-given {
+
+button {
     display: block;
     margin: 1rem auto;
+    border: 1px solid var(--primary-color);
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
 }
 
-#check-btn {
-    display: block;
-    margin: 1rem auto;
-}
-
-#next-btn {
-    display: block;
-    margin: 1rem auto;
-}
 
 body {
     align-content: center;
 text-align:center;
 }
 
-table {
+th , td {
     margin: 1rem auto;
-    
+    padding: 0.5rem;
+    border: 2px solid var(--para-color);
+    background-color: var(--primary-color);
+    color: white;
 }
 
+table {
+    margin: 1rem auto;
+    padding: 1rem;
+}
+
+caption {
+    color: white;
+}

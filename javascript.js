@@ -5,13 +5,13 @@ const checkButton = document.querySelector("#check-btn")
 const cashGivenDiv = document.querySelector(".cash-given-div")
 const tableDiv = document.querySelector (".table-div")
 const errorMsg = document.querySelector (".error-message")
-const notesChange = document.querySelector ("#notesChange")
+const notesChange = document.querySelectorAll (".notes-change")
 
 
 cashGivenDiv.style.display = "none";
 tableDiv.style.display = "none";
 
-var arrayOfNotes = [ 2000 , 500 , 100 , 20 , 10 , 5 , 1 ]
+const numberOfNotes = [ 2000 , 500 , 100 , 20 , 10 , 5 , 1 ]
 
 nextButton.addEventListener("click" , nextbtnClickHandler)
 checkButton.addEventListener("click" , checkBtnClickHandler )
@@ -65,27 +65,22 @@ calculateChange ( totalCashGiven , totalBillAmount);
     }
 }
 
-function calculateChange( cash , bill) {
-   
 
-    var amountReturned = cash - bill;
-    console.log(amountReturned)
-    if ( amountReturned > 0) {
+function calculateChange( cash, bill ) {
+ var amountToBeReturned = cash - bill;
 
-for ( var i = 0 ; i < arrayOfNotes.length ; i ++) {
+ if (amountToBeReturned > 0) {
+ for ( var i = 0 ; i < numberOfNotes.length ; i++) {
+ var giveChange = Math.trunc(amountToBeReturned / numberOfNotes[i]);
 
-    var numberOfNotes = Math.trunc(amountReturned / arrayOfNotes[i]);
+ amountToBeReturned = amountToBeReturned % numberOfNotes[i];
 
-    amountReturned = amountReturned % arrayOfNotes[i];
-
-notesChange[i].innerText = numberOfNotes;
-console.log(numberOfNotes)
+notesChange[i].innerText = giveChange; 
+console.log(giveChange)
+ } } else {
+     showError("No Change")
+ }
 }
-    } else {
-        showError ("No Value to be Returned")
-    }
-}
-
 
 function hideError() {
     errorMsg.style.display = "none";
